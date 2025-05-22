@@ -1,14 +1,18 @@
-import Card from "./card.jsx"
+import Card from "./card.jsx";
+import cardData from "../assets/card-data";
 
+export default function Body() {
 
-
-export default function Body({title}) {
-
-    return (
-            <>
-              
-                <Card />
-
-            </>
-    )
+  return (
+    <div>
+      {cardData.map((card) => (
+        <Card
+          key={card.title}
+          img={card.img}
+          title={card.title}
+          description={card.description}
+        />
+      ))}
+    </div>
+  );
 }
