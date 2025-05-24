@@ -15,10 +15,16 @@ export default function Card({img, title, description}) {
     }
 
     return (
-        <div style={cardStyle}>
+        <div className = "card w-96 bg-white text-black shadow-sm my-2 mx-auto">
         <img src={img} alt={`image of ${title}`}  />
-        <h3>{title}</h3>
+        
+        <div className="card-body">
+        <h3 className = "card-title">{title}</h3>
         <p>{description}</p>
+        <div className = "card-actions">
+
+        </div>
+        </div>
         </div>
     )
 }
